@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :mappings
 
+  get '/:id' => 'mappings#regoto'
 
   root :to => "mappings#index"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -4,7 +4,7 @@
   <%= f.label :longurl, "LongURL"%>
   <%= f.url_field :longurl %>
 
-  <%= f.submit "Shorten" %>
+  <%= f.submit "Shorten", :class => "btn btn-info" %>
 <% end %>
 
 <table class="table">
@@ -14,10 +14,10 @@
     <td>連線次數</td>
   </tr>
 <% @mappings.each do |m| %>
-
-  <td> <%= m.longurl%> </td>
-  <td> <%= m.shotrurl%> </td>
-  <td> <%= m.connect_counts %> </td>
-
+  <tr>
+    <td> <%= m.longurl %> </td>
+    <td> <%= link_to m.shotrurl, "/#{m.shotrurl}" %> </td>
+    <td> <%= m.connect_counts %> </td>
+  </tr>
 <%end %>
 </table>
