@@ -1,0 +1,23 @@
+<h1>URL_Shortener</h1>
+
+<%= form_for [@mapping] do |f| %>
+  <%= f.label :longurl, "LongURL"%>
+  <%= f.url_field :longurl %>
+
+  <%= f.submit "Shorten" %>
+<% end %>
+
+<table class="table">
+  <tr>
+    <td>原網址</td>
+    <td>短網址</td>
+    <td>連線次數</td>
+  </tr>
+<% @mappings.each do |m| %>
+
+  <td> <%= m.longurl%> </td>
+  <td> <%= m.shotrurl%> </td>
+  <td> <%= m.connect_counts %> </td>
+
+<%end %>
+</table>
