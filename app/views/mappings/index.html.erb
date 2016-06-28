@@ -16,7 +16,7 @@
 <% @mappings.each do |m| %>
   <tr>
     <td> <%= m.longurl %> </td>
-    <td> <%= link_to m.shotrurl, "/#{m.shotrurl}" %> </td>
+    <td> <%= link_to "http://#{@host}/#{m.shotrurl}", "/#{m.shotrurl}" %> </td>
     <td> <%= m.connect_counts %> </td>
   </tr>
 <%end %>

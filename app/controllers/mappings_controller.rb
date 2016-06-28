@@ -5,6 +5,7 @@ class MappingsController < ApplicationController
   def index
     @mappings = Mapping.all
     @mapping = Mapping.new
+    @host = request.host_with_port
   end
 
   def create
